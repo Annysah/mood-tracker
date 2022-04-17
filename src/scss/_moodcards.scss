@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  height: 90px;
+  background-color: rgba(243, 244, 246, 0.7);
+  border: 1px solid var(--red);
+  border-radius: 5px;
+
+  &__emoji__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--card-background);
+    border: 1px solid var(--red);
+  }
+
+  &__texts {
+      h2 {
+        color: var(--red);
+        font-size: 20px;
+        line-height: 25px;
+      }
+
+      p {
+          font-size: 12px;
+          color: var(--second-text-color);
+      }
+  }
+
+  &__image {
+      z-index: -1;
+  }
+}

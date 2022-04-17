@@ -1,0 +1,49 @@
+.leftside {
+  width: 500px;
+  height: 500px;
+  border: 1px solid var(--second-text-color);
+  border-radius: 15px;
+  padding: 3rem 7rem;
+  position: relative;
+
+  &__image {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+  }
+
+  h2 {
+    margin-top: 9.5rem;
+    text-align: center;
+    color: var(--first-text-color);
+    //padding: 9rem 6.5rem;
+  }
+
+  &__emoji {
+    display: flex;
+    //align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0 2rem 0;
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background-color: rgba(175, 170, 168, 0.2);
+    }
+  }
+
+  button {
+    width: 150px;
+    height: 50px;
+    background-color: #efeeee;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    margin: 1.7rem 4rem 0;
+  }
+}

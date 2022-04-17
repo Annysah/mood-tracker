@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+:root {
+  --gray-background: #afaaa8;
+  --orange: #ff9635;
+  --green: #32c252;
+  --red: #f93131;
+  --card-background: rgba(249, 49, 49, 0.1);
+  --first-text-color: #898583;
+  --second-text-color: #c4c4c4;
+  --third-text-color: rgba(53, 16, 12, 0.5);
+  --transition: 0.5s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.app {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4rem 10rem;
+}
