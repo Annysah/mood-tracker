@@ -4,7 +4,7 @@ import moodOne from "../assets/one.png";
 import moodTwo from "../assets/two.png";
 import moodThree from "../assets/three.png";
 
-const LeftSide = () => {
+const LeftSide = ({ moodItems, handleAddMood }) => {
   return (
     <>
       <div className="leftside">
@@ -17,20 +17,22 @@ const LeftSide = () => {
         </div>
 
         <div className="leftside__emoji">
-          <div className="leftside__emoji__wrapper">
-            <img src={moodOne} alt="An emoji showing an angry mood" />
-          </div>
+          {moodItems.map((moodItem) => (
+            <div className="leftside__emoji__wrapper">
+              <img src={moodItem.image} alt={moodItem.alt} />
+            </div>
+          ))}
 
-          <div className="leftside__emoji__wrapper">
+          {/*<div className="leftside__emoji__wrapper">
             <img src={moodTwo} alt="An emoji showing a neutral mood" />
           </div>
 
           <div className="leftside__emoji__wrapper">
             <img src={moodThree} alt="An emoji showing a smiling mood" />
-          </div>
+        </div>*/}
         </div>
-        
-        <button className="leftside__button">Save mood</button>
+
+        <button className="leftside__button" onClick={() => handleAddMood()}>Save mood</button>
       </div>
     </>
   );

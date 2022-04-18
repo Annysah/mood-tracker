@@ -4,7 +4,7 @@ import smallCat from "../assets/cat2.png";
 import transparentCat from "../assets/cat3.png";
 import MoodCards from "./MoodCards";
 
-const RightSide = () => {
+const RightSide = ({ cardItems, onAddMood }) => {
   return (
     <>
       <div className="rightside">
@@ -17,12 +17,22 @@ const RightSide = () => {
 
         <p className="rightside__firstpara">Mood History</p>
 
-        <div className="rightside__content">
-          <img className="rightside__content__image" src={transparentCat} alt="A cat transparent head" />
-          <p>No mood history to show yet</p>
-        </div>
+        {cardItems.length === 0 && (
+          <div className="rightside__content">
+            <img
+              className="rightside__content__image"
+              src={transparentCat}
+              alt="A cat transparent head"
+            />
+            <p>No mood history to show yet</p>
+          </div>
+        )}
 
-        <MoodCards />
+        <div>
+          {cardItems.map((item) => (
+            <MoodCards item={item} />
+          ))}
+        </div>
       </div>
     </>
   );

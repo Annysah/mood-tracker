@@ -1,21 +1,21 @@
 import React from "react";
 
 import moodOne from "../assets/one.png";
-import whiteCard from "../assets/cat4.png";
+import whiteCat from "../assets/cat4.png";
 
-const MoodCards = () => {
+const MoodCards = ({ item }) => {
   return (
     <>
       <div className="card">
-        <div className="card__emoji__wrapper">
-          <img src={moodOne} alt="An emoji showing an angry mood" />
+        <div className="card__emoji__wrapper" key={item.id}>
+          <img src={item.image} alt={item.alt} />
         </div>
         <div className="card__texts">
-            <h2>Cat wasn't having it</h2>
-            <p>06-09-2021 / 07:01</p>
+          <h2>{item.description}</h2>
+          <p>06-09-2021 / 07:01</p>
         </div>
         <div className="card__image">
-          <img src={whiteCard} alt="A white cat head" />
+          <img src={item.whiteCat} alt="A white cat head" />
         </div>
       </div>
     </>
